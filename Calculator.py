@@ -165,6 +165,31 @@ def Play_again():
 username = input("Please Create a Username:  ")
 password = input("Please Create a Password:  ")
 
+store_username =[       ]
+store_pass =[      ]
+
+store_username.append(username)
+store_pass.append(password)
+
+
+if username in store_username:
+    print("That user already exsist")
+
+while 1 == 1:
+    usernameguess=""
+    passwordguess=""
+    key=""
+    while (usernameguess != username) or (passwordguess != password):
+        usernameguess = input('User Name: ')
+        passwordguess = input('Password:')
+
+    print("Welcome,",username, ". Type Lock to Lock or Type Create to create another user.")
+    print(store_username)
+    print(store_pass)
+
+    while key != "lock":
+        key = input("")
+
 
 
 
